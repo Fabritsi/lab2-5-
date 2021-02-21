@@ -1,0 +1,29 @@
+using System;
+
+namespace Task2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("a=");
+            double a = Convert.ToDouble(Console.ReadLine());
+            Console.Write("n=");
+            double n = Convert.ToDouble(Console.ReadLine());
+
+          
+            double Sum = Math.Pow(a, 2);
+            int i = 1;
+
+
+            while (i <= n+1)
+            {
+                Sum = Sum * Math.Pow(a + n - i, 2);
+                i++;
+            }
+            Console.Write(Sum);
+        }
+
+     }
+           
+}
