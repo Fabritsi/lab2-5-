@@ -1,0 +1,39 @@
+using System;
+
+namespace Task2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("x від 0 до pi =");
+            double x = Convert.ToDouble(Console.ReadLine());
+            if (!(0 < x && x < Math.PI))
+                {
+                Console.Write("Помилка");
+                }
+            Console.Write("e =");
+            double e = Convert.ToDouble(Console.ReadLine());
+            int n = 1;
+            double S1 = Math.Log(Math.Abs(Math.Sin(x)));
+            double Sum = -Math.Log(2);
+
+            while (Math.Abs(Sum)<e)
+            {
+                Sum -= (Math.Cos((2 * n * x) / n));
+                n++;
+            }
+            if (Sum - S1<e)
+            {
+                Console.Write("Справедливо");
+
+            }
+            else
+            {
+                Console.Write("Не справедливо");
+            }
+        }
+
+     }
+           
+}
