@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+
+namespace Task2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("номер n-го елемента =");
+            int n = Convert.ToInt32(Console.ReadLine());
+            List<Int32> nums = new List<int>();
+            int i = 2;
+            while(i<=n)
+            {
+                int el = nums[i - 1] + nums[i - 2];
+                nums.Add(el);
+                i++;
+            }
+            for (int c = 0; i<nums.Count; c++)
+            {
+                Console.Write("Список:");
+                Console.Write(nums[c]+",");
+            }
+           // Console.Write("xn=" + el);
+        }
+
+     }
+           
+}
